@@ -29,7 +29,7 @@ module.exports = {
                 coordinates: [longitude, latitude],
             };
 
-            const dev = await Dev.create({
+            dev = await Dev.create({
                 github_username,
                 name,
                 avatar_url,
@@ -40,5 +40,11 @@ module.exports = {
         }
         return response.json(dev);
 
-    }
+    },
+
+    //nome, avatar, bio, localização e techs 
+    // async update()  {},
+    // async destroy() {}
+
+    
 }

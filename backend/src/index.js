@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const routes = require('./routes')
+const cors = require('cors')
 
 const app = express();
 
@@ -11,6 +12,7 @@ mongoose.connect('mongodb+srv://omnistack10:omnistack@omnistack10-9dxnh.mongodb.
 })
 
 //.use válida para todas as rotas da aplicação
+app.use(cors())
 app.use(express.json());
 app.use(routes)
 
